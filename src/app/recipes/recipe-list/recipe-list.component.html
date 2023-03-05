@@ -1,1 +1,28 @@
-<app-recipe-item></app-recipe-item>
+<div class="row">
+  <ul class="">
+    <li *ngFor="let recipe of recipes" class="list-group-item">
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="{{ recipe.imagePath }}"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ recipe.name }}
+              </h5>
+              <p class="card-text">
+                {{ recipe.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <app-recipe-item></app-recipe-item>
+</div>
